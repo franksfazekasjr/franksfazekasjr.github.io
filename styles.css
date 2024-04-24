@@ -1,7 +1,9 @@
 body {
     background-color: #dfd;
+    text-align: center;
 }
 
 h1 {
     color: darkgreen;
+    margin: 0 auto;
 }
