@@ -1,9 +1,193 @@
-body {
-    background-color: #dfd;
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold-Italic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold-Italic.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold-Italic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-ExtraBold.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Italic.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium-Italic.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  Body{
+      font-family: 'JetBrains Mono';//, sans-serif;
+    //font-family: 'Raleway';
+    //font-family: 'Roboto', sans-serif;
+    font-family:lato;//,Arial Black,Arial,Helvetica,sans-serif;
+      margin: 0;
+      padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @media only screen and (max-width: 35em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  
+  #navbar{
+    background-color: #095719;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    Justify-content: flex-end;
+  }
+  
+  #nav-list{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  li{
+    List-style: none;
+  }
+  
+  a {
+    Color: #dfd;
+    Text-decoration: none;
+    Font-size: 1.2em;
+    Padding: 1rem .75rem;
+  }
+  
+  a:hover{
+      Background-color: #6eb563;
+    margin: 0;
+  }
+  
+  
+  
+  #welcome-section{
+        Width: 100%;
+        Height: 100vh;
+        Display: flex;
+        Flex-direction: column;
+        Align-items: center;
+        Justify-content: center;
+        background-color: #45567d;
+        background-image: linear-gradient(
+              62deg,
+              #302a37,
+              #1b2d19  100%
+              );
+  }
+  h1{
+      Color: #dfd;
+    Font-size: 2.75rem;
+    Font-weight: 700;
+  }
+  
+  #welcome-section > p{
+      Color: #6eb563;
+      Font-size: 2rem;
+      Font-style: italic;
+    Font-weight: 100;
     text-align: center;
-}
-
-h1 {
-    color: darkgreen;
+  }
+  
+  .projects{
+      Padding: 10rem 2rem;
+      Text-align: center;
+    background-color: #6eb563;
+    /*background-color: #095719;*/
+  }
+  
+  .projects > h2{
+      Font-size: 3.2rem;
+      Color: #dfd;
+  }
+  
+  .project-img {
+      height: calc(100% - 6.8rem);
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  .project-title{
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+      color: #dfd;
+    background-color: #095719;
+    margin-top: 0;
+  }
+  
+  .projects-grid{
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 4rem;
+      width: 100%;
+      max-width: 1280px;
     margin: 0 auto;
-}
+      margin-bottom: 6rem;
+  }
+  
+  .learning {
+    background-color: lightgreen;
+  }
+  
+  .contact {
+    background-color: lime;
+  }
