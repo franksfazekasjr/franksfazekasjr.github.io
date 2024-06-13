@@ -100,7 +100,7 @@ hr {
   grid-template-columns: repeat(5, 1fr);
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  align-items: right;
+  justify-content: end;
 }
 
 .first-paragraph::first-letter {
