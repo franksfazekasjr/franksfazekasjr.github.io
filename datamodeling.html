@@ -102,6 +102,57 @@
           In summary, each data model builds upon the previous one, gradually adding details and translating the data structure into a format suitable for implementation within a specific database system.
         </p>
       </section>
+      <section class="text">
+
+
+          <p class="article-title">
+            Developing star schema data warehouse data models:
+          </p>
+          <p class="first-paragraph">
+            Here's a the process I use for for developing a data warehouse star schema data model:
+          </p>
+          <p>
+            Define Business Requirements:
+              Understand the Business: Begin by gathering a clear understanding of the business goals and objectives. What information is crucial for decision-making? Which business processes generate the data you need to track?
+              Identify Key Performance Indicators (KPIs): Determine the key metrics that will be used to measure success and track performance across different areas of the business.
+          </p>
+          <p>
+            Identify Data Sources:
+              Locate Relevant Data Sources: Pinpoint the various sources of data that will feed into the data warehouse. This could include transactional databases, operational systems, CRM systems, and other data repositories.
+              Data Quality Assessment: Evaluate the quality of the data from each source. Ensure the data is accurate, consistent, and complete for reliable analysis.
+          </p>
+          <p>
+            Design the Dimensional Model:
+              Identify Dimensions: Dimensions are descriptive attributes that provide context for the fact data (measures). Examples include time, product, customer, location, etc. Each dimension should have a unique identifier (primary key) to link it to the fact table.
+              Define Dimension Hierarchies: For some dimensions, explore hierarchical relationships between attributes. For instance, a "time" dimension might have a hierarchy of year, quarter, month, day.
+              Attribute Selection: Choose the most relevant attributes for each dimension, considering factors like business needs and storage optimization.
+          </p>
+          <p>
+            Design the Fact Table:
+              Identify Facts (Measures): These are the quantitative metrics you want to analyze, like sales amount, unit sold, average transaction value, etc.
+              Foreign Keys: The fact table will have foreign keys referencing the primary keys of each dimension table. This establishes the relationships between dimensions and facts.
+              Grain of Fact Table: Define the level of detail at which the facts will be stored. This could be transaction-level, daily, monthly, etc., depending on your business needs and data granularity requirements.
+          </p>
+          <p>
+            Refine and Normalize (Optional):
+              Normalization: While star schemas are generally denormalized for performance reasons, limited normalization might be applied to dimension tables to reduce redundancy if needed.
+              Iterate and Refine: Review the model with stakeholders and business users. Based on their feedback, refine the data model to ensure it meets their needs effectively.
+          </p>
+          <p>
+            Documentation and Implementation:
+              Document the Model: Create clear and comprehensive documentation outlining the data model design decisions, including dimension and fact table details, relationships, and data types.
+              Data Transformation and Loading: Develop processes to extract, transform, and load (ETL) data from source systems to the data warehouse, ensuring data integrity and consistency.
+          </p>
+          <p>
+            The following tools and techniques can help you in your development:
+              Data Modeling Tools: Several data modeling tools can help visualize and document the star schema design.
+              ER Diagrams: Entity-Relationship Diagrams (ERDs) are commonly used to represent the relationships between dimensions and facts in the star schema.
+          </p>
+          <p>
+            In conclusion, by following these steps and considering these factors, you can develop a star schema data model that effectively supports data warehousing and business intelligence needs. Remember, this is a cyclical process, and you might need to revisit and refine the model based on evolving business requirements and data analysis needs.
+          </p>
+
+      </section>
 
 
 
@@ -112,7 +163,11 @@
 
 
 
-        
+
+
+
+
+      
     
       <section class="text text-with-images">
         <article class="brief-history">
