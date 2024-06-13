@@ -75,7 +75,7 @@ hr {
   font-size: 8rem;
 }
 
-.hero-subtitle .article-title {
+.hero-subtitle {
   font-size: 2.4rem;
   color: var(--hero-text);
   text-align: center;
