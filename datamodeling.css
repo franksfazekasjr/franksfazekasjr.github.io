@@ -49,7 +49,7 @@ hr {
   border: 1px solid rgba(120, 120, 120, 0.6);
 }
 
-.heading {
+.heading .article-title {
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -75,7 +75,7 @@ hr {
   font-size: 8rem;
 }
 
-.hero-subtitle {
+.hero-subtitle .article-title {
   font-size: 2.4rem;
   color: var(--hero-text);
   text-align: center;
