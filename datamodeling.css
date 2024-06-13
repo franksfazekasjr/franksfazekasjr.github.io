@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --hero-text: #6eb563;  
+}
+
 html {
   font-size: 62.5%;
 }
@@ -13,7 +17,7 @@ html {
 body {
   font-family: 'Baskervville', serif;
   color: linen;
-  background-color: rgb(20, 30, 40);
+  background-color: #4b8b41;
 }
 
 h1 {
@@ -67,13 +71,13 @@ hr {
 
 .hero-title {
   text-align: center;
-  color: orangered;
+  color: var(--hero-text);
   font-size: 8rem;
 }
 
 .hero-subtitle {
   font-size: 2.4rem;
-  color: orangered;
+  color: var(--hero-text);
   text-align: center;
 }
 
@@ -101,7 +105,7 @@ hr {
 
 .first-paragraph::first-letter {
   font-size: 6rem;
-  color: orangered;
+  color: var(--hero-text);
   float: left;
   margin-right: 1rem;
 }
