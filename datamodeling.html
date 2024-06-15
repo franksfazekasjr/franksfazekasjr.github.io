@@ -173,6 +173,13 @@
             indexes is that they <b>sort</b> the table data physically in order by the column included in the clustered index.  Normally this isn't an issue as data is inserted in the same order as the generated key
             (newest data with highest key value is inserted at the end of the table and data page).
           </p>
+        <blockquote>
+          <hr/>
+            <p class="quote">
+              Don't forget that a CLUSTERED index defines a physical sort order on the table and this can work against you if you aren't careful...
+            </p>
+          <hr/>
+        </blockquote>
           <p>
             GUIDs are different...they are randomly generated and do not follow regular sort order, either alphabetic or numeric.  That means that when a new row is inserted into a table where the primary key is 
             a GUID and has a clustered index on that column the row has to be inserted in sort order for the GUID value.
