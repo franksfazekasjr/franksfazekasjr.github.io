@@ -170,16 +170,16 @@
           <p>
             There was a rush to use the new GUID as primary keys, in some cases even to refactor exisiting tables to replace identity columns or sequences in generating primary key values.
             However, a wholesale conversion to GUIDs as primary keys does have its drawbacks.  Frequently (if not almost always), the primary key column has a clustered index on it...the critical thing to remember about clustered
-            indexes is that they <b>sort</b> the table data physically in order by the column included in the clustered index.  Normally this isn't an issue as data is inserted in the same order as the generated key
-            (newest data with highest key value is inserted at the end of the table and data page).
-          </p>
         <blockquote>
           <hr/>
             <p class="quote">
               Choose your clustered index such that inserting data doesn't require moving a lot of rows of data to make room...
             </p>
           <hr/>
-        </blockquote>
+        </blockquote>           
+            indexes is that they <b>sort</b> the table data physically in order by the column included in the clustered index.  Normally this isn't an issue as data is inserted in the same order as the generated key
+            (newest data with highest key value is inserted at the end of the table and data page).
+          </p>
           <p>
             GUIDs are different...they are randomly generated and do not follow regular sort order, either alphabetic or numeric.  That means that when a new row is inserted into a table where the primary key is 
             a GUID and has a clustered index on that column the row has to be inserted in sort order for the GUID value.
