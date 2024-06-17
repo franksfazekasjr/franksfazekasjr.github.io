@@ -162,30 +162,25 @@
 
       <section class="text">
           <p class="hero-subtitle">
-            GUIDs, Clustered Indexes and Insdert/Update performance
+            Minimizing Data Movement in Response to INSERT/UPDATE
           </p>
           <p class="first-paragraph">
-            Remember when GUIDs were introduced into MS SQL Server? I do.  We all hailed the globally unique identifier as a panacea solving so many database issues - especially in generating primary/unique key values.
           </p>
           <p>
-            There was a rush to use the new GUID as primary keys, in some cases even to refactor exisiting tables to replace identity columns or sequences to generate primary keys with GUIDs.
-            However, a wholesale conversion to GUIDs as primary keys does have its drawbacks - specifically when inserting new rows and possibly when updating them.  Frequently (if not almost always), the primary key column has a clustered index on it...the critical thing to remember about clustered
         <blockquote>
           <hr/>
             <p class="quote">
-              Choose your clustered index such that inserting data doesn't require moving a lot of rows of data to make room...
+              
             </p>
           <hr/>
         </blockquote>           
-            indexes is that they <b>sort</b> the table data physically in order by the column included in the clustered index.  Normally this isn't an issue as data is inserted in the same order as the generated key
-            (newest data with highest key value is inserted at the end of the table and data page).
-          </p>
-          <p>
-            GUIDs are different...they are randomly generated and do not follow regular sort order, either alphabetic or numeric.  That means that when a new row is inserted into a table where the primary key is 
-            a GUID and has a clustered index on that column the row has to be inserted in sort order for the GUID value.
-          </p>
-          <p>
             
+          </p>
+          <p>
+
+          </p>
+          <p>
+
           </p>
           <p>
 
